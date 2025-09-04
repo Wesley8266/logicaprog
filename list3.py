@@ -12,7 +12,7 @@
 
 
 # n = int(input("insira um numero inteiro: "))
-# for i in range(n):
+# for i in range(n + 1):
 #     if i % 2 == 0:
 #         print(f"{i} é par")
 #     else :
@@ -22,3 +22,21 @@
 # for i in range (1,11):
 #    resultado = Numero * i
 #    print(f"Número: {Numero} * {i} = {resultado} ")
+
+# n = int(input("digite um numero inteiro: "))
+# if n % 1:
+#     print("esse numero é primo")
+# elif n % n:
+#     print("esse numero é primo")
+# else:
+#     print("esse numero nao é primo")
+
+alu = int(input("quantos alunos tem na sua turma? "))
+aluno = 0
+notas = 0
+for n in range(alu):
+    while True:
+        no = float(input(f"digite a nota do aluno {n +1}:"))
+        break
+
+
