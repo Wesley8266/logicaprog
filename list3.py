@@ -1,18 +1,14 @@
 #01
-# altura = float(input("diga-me seu altura"))
-# peso = float(input("diga-me agora o seu peso"))
-# imc = peso / (altura * altura )
+# altura = float(input("diga-me seu altura :"))
+# peso = float(input("diga-me agora o seu peso: "))
+# imc = peso / (altura ** 2 )
 # if imc < 18.5:
 #     print("abaixo do peso")
-# elif imc >= 18.5:
+# elif imc > 18.5 and  imc < 24.9 :
 #     print("peso normal")
-# elif imc < 25.0:
-#     print("peso normal")
-# elif imc >= 25:
+# elif imc == 25 and imc < 29.9 :
 #     print("sobrepeso")
-# elif imc <= 29.9:
-#     print("sobrepeso")
-# elif imc > 30:
+# elif imc >= 30:
 #     print("obesidade")
 
 #02
@@ -25,7 +21,6 @@
      
 #03
 # num = int(input("Digite um número inteiro para gerar a tabuada: "))
-
 # for i in range(1, 11):
 #     print(f"{num} x {i} = {num * i}")
 
@@ -46,20 +41,20 @@
 #     print(f"{num} não é primo.")
 
 # #05
-# qtd_alunos = int(input("Digite a quantidade de alunos da turma: "))
-# notas = []
+qtd_alunos = int(input("Digite a quantidade de alunos da turma: "))
+notas = []
 
-# for i in range(qtd_alunos):
-#     nota = float(input(f"Digite a nota do aluno {i+1}: "))
-#     notas.append(nota)
+for i in range(qtd_alunos):
+    nota = float(input(f"Digite a nota do aluno {i+1}: "))
+    notas.append(nota)
 
-# media_geral = sum(notas) / qtd_alunos
-# acima = len([nota for nota in notas if nota > media_geral])
-# abaixo = len([nota for nota in notas if nota < media_geral])
+media_geral = sum(notas) / qtd_alunos
+acima = len([nota for nota in notas if nota > media_geral])
+abaixo = len([nota for nota in notas if nota < media_geral])
 
-# print(f"Média geral: {media_geral:.2f}")
-# print(f"Alunos acima da média: {acima}")
-# print(f"Alunos abaixo da média: {abaixo}")
+print(f"Média geral: {media_geral:.2f}")
+print(f"Alunos acima da média: {acima}")
+print(f"Alunos abaixo da média: {abaixo}")
 
 # #06
 # import random
