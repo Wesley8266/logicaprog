@@ -1,21 +1,22 @@
 from funcoes import *
 
-ListaNotas = []
-print("insira 1 para cadatrar aluno")
-print("insira 2 para exibir relatório de aluno")
-print("insira 0 para sair do programa")
+print("1 - Adicionar livro-----------------------------------")
+print("2 - Exibir todos os livros")
+print("3 - Emprestar livro")
+print("4 - Devolver livro")
+print("0 - Sair-------------------------------")
+
+listalivros = []
 while True:
-    opcao = input("qual procedimento deseja realizar? ")
-    if opcao == "1":
-        print("cadastro")
-        nome = input("nome do aluno: ")
-        for i in range(3):
-            notas = int(input("notas do aluno: "))
-            ListaNotas.append(notas)
-    elif opcao == "2":
-        print(f"nome do aluno: {nome}")
-        print(f"Notas: {ListaNotas}")
-        print("media:", Lista_Notas(ListaNotas))
-    elif opcao == "0":
-        print("programa finalizado")
+    opcao = int(input("o que deseja fazer? "))
+    if opcao == 1:
+        adicionarlivro(listalivros)
+    elif opcao == 2:
+        print(exibirlivros(listalivros))
+    elif opcao == 3: 
+        print(emprestarlivro(listalivros))
+    elif opcao == 4:
+        print(devolverlivro(listalivros))
+    elif opcao == 0:
+        print("programa encerrado.......")
         break
