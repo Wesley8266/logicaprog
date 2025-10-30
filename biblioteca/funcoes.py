@@ -10,13 +10,17 @@ def exibirlivros(listalivros):
     return listalivros
 
 def emprestarlivro(listalivros):
-    # livro = input("qual livro deseja emprestar: ")
-    # for i in listalivros:
-    #      if livro in listalivros["titulo"]:
+    livro = input("qual livro deseja emprestar: ")
+    for i in listalivros:
+         if livro == i["titulo"]:
+             i["status"]="emprestado"
+    return listalivros
 
-    
 def devolverlivro(listalivros):
-    status="Disponível"
-
+    livro = input("qual livro deseja devolver: ")
+    for i in listalivros:
+         if livro == i["titulo"]:
+             i["status"]="disponivel"
+    return listalivros
 
 
