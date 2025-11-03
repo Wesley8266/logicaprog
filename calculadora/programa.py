@@ -22,3 +22,5 @@ while True:
         print(f"programa encerrado {emoji} ")
         break
 emoji = emoji.emojize(":OK_hand:")
+
+
