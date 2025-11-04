@@ -13,7 +13,7 @@ while True:
     if opcao == 1:
         adicionarlivro(listalivros)
     elif opcao == 2:
-        print((exibirlivros(listalivros)))
+        print(exibirlivros(listalivros))
     elif opcao == 3: 
         print(emprestarlivro(listalivros))
     elif opcao == 4:
