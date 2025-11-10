@@ -1,3 +1,4 @@
+
 def registrar_viagens(listaviagens):
     motorista = input("nome do motorista:")
     destino = input("destino: ")
@@ -11,22 +12,28 @@ def registrar_viagens(listaviagens):
 def exibir_viagens(listaviagens):
     return listaviagens
 
+
 def buscar_motorista(listaviagens):
     motorista = input("qual motorista deseja consultar: ")
+    viagens_m = []
     for i in listaviagens:
-        if motorista != i["motorista"]:
-            return "motorista nao encontrado!"
-        elif motorista == i["motorista"]:
-            return motorista
+        if motorista == i["motorista"]:
+            viagens_m.append(i)
+            return print(viagens_m) 
+        elif motorista != ["motorista"]:
+            return print("motorista nao encontrado")
+
 
 def viagem_mais_cara(listaviagens):
+    maior = 0
     for i in listaviagens:
-        maior_valor = max["gasto"]
-        print(f"a viagem com maior valor é {maior_valor}")
+        if i["gasto"] >= maior:
+           maior = i["gasto"]
+    return maior
 
 
-def media_consumo(listaviagem):
-    for i in listaviagem:
-        media = ["gasto"] / ["distancia"]
+def media_consumo(listaviagens):
+    for i in listaviagens:
+        media = i["gasto"] / i["distancia"]
     return media
         

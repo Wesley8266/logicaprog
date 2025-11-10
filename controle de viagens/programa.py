@@ -11,6 +11,7 @@ print("0 - Sair-------------------------------")
 listaviagens=[]
 while True:
     opcao = int(input("o que deseja fazer? "))
+    
     if opcao == 1:
         registrar_viagens(listaviagens)
     elif opcao == 2:
@@ -18,7 +19,10 @@ while True:
     elif opcao == 3: 
         print(buscar_motorista(listaviagens))
     elif opcao == 4:
-        print(devolverlivro(listalivros))
+        print(viagem_mais_cara(listaviagens))
+    elif opcao ==5:
+        print(media_consumo(listaviagens))
     elif opcao == 0:
         print("programa encerrado.......")
         break
+    
