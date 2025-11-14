@@ -16,7 +16,7 @@ while True:
             notas = float(input("notas do aluno: "))
             ListaNotas.append(notas)
             media = calcular_media(ListaNotas)
-    
+        
     elif opcao == "2":
         print(f"nome do aluno: {nome}")
         print(f"Notas: {ListaNotas}")

@@ -1,3 +1,5 @@
+from tabulate import tabulate
+
 
 def registrar_viagens(listaviagens):
     motorista = input("nome do motorista:")
@@ -10,18 +12,22 @@ def registrar_viagens(listaviagens):
     return viagem
 
 def exibir_viagens(listaviagens):
-    return listaviagens
+    tabela = []
+    for i in listaviagens:
+        tabela.append([i["motorista"], i["destino"], i["distancia"], i["gasto_combustivel"], i["consumo"]])
+    print(tabulate(
+        tabela, 
+        headers= ["motorista","destino","distancia","gasto_combustivel","consumo"], tablefmt = "fancy_grid"))
+
 
 
 def buscar_motorista(listaviagens):
+    viagem_m = []
     motorista = input("qual motorista deseja consultar: ")
-    viagens_m = []
     for i in listaviagens:
         if motorista == i["motorista"]:
-            viagens_m.append(i)
-            return print(viagens_m) 
-        elif motorista != ["motorista"]:
-            return print("motorista nao encontrado")
+            viagem_m.append(i)
+    print(tabulate([viagem_m], headers = "keys", tablefmt = "fancy_grid"))
 
 
 def viagem_mais_cara(listaviagens):
@@ -37,7 +43,7 @@ def media_consumo(listaviagens):
     distancia = 0
     for viagem in listaviagens:
         total += viagem["gasto_combustivel"]
-        total_distancia += viagem["distancia"]
+        distancia += viagem["distancia"]
     media = total / distancia
-    return media
+    print(f"consumo:{media}")
         

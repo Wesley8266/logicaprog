@@ -15,7 +15,7 @@ while True:
     if opcao == 1:
         registrar_viagens(listaviagens)
     elif opcao == 2:
-        print(exibir_viagens(listaviagens))
+        exibir_viagens(listaviagens)
     elif opcao == 3: 
         print(buscar_motorista(listaviagens))
     elif opcao == 4:
